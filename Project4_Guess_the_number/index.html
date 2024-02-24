@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Guess the Number Game | Code aur Chai</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="numberContainer">
+        <h1>Number Guessing Game</h1>
+        <form class="numberGame">
+            <!-- <h2 class="heading">Guess the Number</h2> -->
+            <input type="text" name="number" id="guessNumber">
+            <input type="submit" value="Guess" id="guess">
+            <input type="submit" value="New Game" class="newGame">
+            <p class="prevGuess">Previous Guesses: <span id="prevGuessArray"></span></p>
+            <p class="remainingGuess">Remaining Guess: <span id="remainCount">10</span></p>
+            <p class="guessStatus">Guess Status: <span id="status">Random Value is ready guess your number</span></p>
+        </form>
+    </div>
+    <div class="guideContainer">
+        <fieldset>
+            <legend>Rule Book</legend>
+            <p class="guide">1. Try and Guess any random number between 1 to 100.</p>
+            <p class="guide">2. You have 10 attemps to guess the right number.</p>
+        </fieldset>
+    </div>
+   <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure </title>
+</head>
+<body style="background-color: #212121;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+    <!-- <script src="closure.js"></script> -->
+</body>
+    <script>
+        // Real world scenario of Closure usecase
+
+        // suppose we have two buttons one is orange one is green 
+        // if we click orange button then the v=body color will change to orange 
+        // same as green also
+
+        // lets code this 
+
+        // function colorChanger(color){
+        //     document.querySelector('body').style.backgroundColor = `${color}`  
+        // }
+
+        // // // if we write this then the colorChanger will execute without any onclick
+        // document.querySelector('#orange').addEventListener('click', colorChanger("orange"))  
+        // document.querySelector('#green').addEventListener('click', colorChanger("green"))
+
+
+        function colorChanger(color){
+            function change(){
+                document.querySelector('body').style.backgroundColor = `${color}`
+            }
+            return change;  // this is nothing but closure when we return a function then not only the function 
+                            // will return but also the lexical scope of this function will return
+        }
+
+        document.querySelector('#orange').addEventListener('click', colorChanger("orange"))  
+        document.querySelector('#green').addEventListener('click', colorChanger("green"))
+
+
+    </script>
+
+</html>
